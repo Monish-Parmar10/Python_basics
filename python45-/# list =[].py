@@ -74,3 +74,49 @@
 #     if itration > largest_num:
 #         largest_num = itration
 # print(largest_num)
+
+
+
+
+
+'''word counter / freq counting problem'''
+# freq={}
+# words = ["apple","banana","apple","orange","banana","apple"]
+# for word in words:   #**
+#     if word in freq:#**  
+#      freq[word] +=1  #**
+#     else:
+#        freq[word] =1
+# print(freq)
+
+'''or'''
+
+
+# words ={}
+# sentance = "apple banana orange banana apple mango"
+# sentance = sentance.split()
+# for fruits in sentance:
+#     if fruits in words:
+#         words[fruits] += 1
+#     else:
+#         words[fruits] = 1
+# print(words)
+
+
+'''only take 3 letter frin the list and append into another then pop'''
+# teams =["RCB","GT","SRH","RR"]
+# stach = []
+# monish = [1,2,3]
+# for t in teams:
+#     if len(t) == 3:
+#      stach.append(t)
+# print(stach.pop()) #pop element
+
+
+'''append/inset list'''
+# list1 = [1,2,3,4]
+# list2=[]
+# for num in list1:
+#     list2.insert(0,num)
+# print(list2)
+

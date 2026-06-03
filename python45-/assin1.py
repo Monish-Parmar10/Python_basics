@@ -200,14 +200,14 @@
 
 '''vowels'''
 
-# name = input("enter a name so i eat ugly vowel from it:")
-# name = name.upper()
-# no_vowel =""
-# for i in name:
-#     if i=="A" or i=="E" or i=="I" or i=="O" or i=="U":
-#      continue
-#     no_vowel = no_vowel + i
-# print(no_vowel)
+name = input("enter a name so i eat ugly vowel from it:")
+name = name.upper()
+no_vowel =""
+for i in name:
+    if i=="A" or i=="E" or i=="I" or i=="O" or i=="U":#if i in AEIOU
+     continue
+    no_vowel = no_vowel + i
+print(no_vowel)
  
 
 '''box'''
@@ -286,7 +286,7 @@
 #        print("Fizz")
 #     else:
 #        print(num) 
-
+'''digit count'''
 # strg= "MindCoders password2 is : 1234"
 # count =0
 # for ch in strg:
@@ -294,13 +294,76 @@
 #           count +=1
 # print(count)   
 
+
 # strg= "U r a a n S 0 f t s k i l l 1 s 1234"
 # count =0
 # for ch in strg:
 #      if ch.isdigit():
 #           count +=1
 # print(count)   
+'''loops'''
+
+# for Nat_num in range(1,11):
+#     print(Nat_num)
 
 
+# for num in range(1,11):
+#     if num%2 ==0:
+#      print(num)
+
+# sum = 0
+# for num in range(1,16):
+#     sum = sum + num
+#     print(sum)
+
+# odd_Sum = 0
+# for num in range(1,16):
+#    if num%2!= 0:
+#       odd_Sum = odd_Sum + num
+#       print(odd_Sum)
+
+# for table in range(1,11):
+#     print(table*15)
+
+# list = [1,2,4,88,125]
+# for num in list:
+#     print(num)
+
+# number = "129475"
+# print(len(number))
+'''or'''
+# number = 129475
+# print(len(str(number)))
+
+'''or'''
+# number = 129475
+# count = 0
+# while number:
+#      number = number // 10
+#      count +=1
+# print(count)
 
 
+# name = "madam"
+# if name == name[::-1]:
+#      print("it is palindrome ")
+# else:
+#      print("not a palindrome")
+
+
+# word = input("enter a word")
+# word = word[::-1]
+# print(word)
+
+num = 153
+original = num
+total = 0
+
+while num > 0:
+    digit = num % 10
+    total += digit**3
+    num = num // 10
+if total == original:
+    print("Armstrong number")
+else:
+    print("not an Armstrong")

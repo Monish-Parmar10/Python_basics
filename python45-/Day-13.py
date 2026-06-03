@@ -82,16 +82,29 @@
 
 
 
-'''word counter'''
-dict={}
-words = ["apple","banana","apple","orange","banana","apple"]
-values =0
-count =0
-dict = words.copy()
-print(dict)
-for word in dict:
-    if dict.count(word)>1:
-        count +=1
-    else:
-        count ==1
-    print(word,count)
+'''word counter / freq counting problem'''
+# freq={}
+# words = ["apple","banana","apple","orange","banana","apple"]
+# for word in words:   #**
+#     if word in freq:#**  USE TO SOLVE THE COUNT -> CHAR,VOTES WORDS,MARKS PRODUCT SOLD USING DICTIONARY
+#      freq[word] +=1  #**
+#     else:
+#        freq[word] =1
+# print(freq)
+
+
+'''only take 3 letter frin the list and append into another then pop'''
+# teams =["RCB","GT","SRH","RR"]
+# stach = []
+# monish = [1,2,3]
+# for t in teams:
+#     if len(t) == 3:
+#      stach.append(t)
+# print(stach.pop()) #pop element
+'''append/insert list'''
+# list1 = [1,2,3,4]
+# list2=[]
+# for num in list1:
+#     list2.insert(0,num)
+# print(list2)
+
