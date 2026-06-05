@@ -112,3 +112,4 @@ obj = Level3()
 print(obj.varible_1,obj.var_1,obj.fun_1())
 print(obj.varible_2,obj.var_2,obj.fun_2())
 print(obj.varible_3,obj.var_3,obj.fun_3())
+

@@ -46,10 +46,16 @@ def again():
     print("|","WELCOME TO VOWEL ARENA","|")
     print("-"*26)
     total = 0
+    wrd_L =0
+
     for wrd in range(5):
         score = 0
         val=0
         wrd = input("| ENTER THE WORD HERE:-")
+        if len(wrd)>=7:                        # One char size condition applied
+           print("ch should be less then 7 ")  # One char size condition applied
+           continue                            # One char size condition applied
+    
         for ch in wrd:
          if ch in "AEIOUaeiou":
           val+=1   #for the vowel count
@@ -66,5 +72,4 @@ def again():
    print("invalid choice")
    break
 again()
-
 
