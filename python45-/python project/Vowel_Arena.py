@@ -11,7 +11,7 @@ def again():
   print("|"," "*15,"|")
   print("|"," "*2,"1.DETAILS"," "*2,"|")   
   print("|"," "*2,"2.START"," "*4,"|")
-  print("|"," "*2,"3.Exit"," "*4,"|")
+  print("|"," "*2,"3.Exit"," "*5,"|")
   print("-"*19)
 
 
@@ -46,23 +46,31 @@ def again():
     print("|","WELCOME TO VOWEL ARENA","|")
     print("-"*26)
     total = 0
-    wrd_L =0
-
+   
     for wrd in range(5):
         score = 0
         val=0
+        count = 0
         wrd = input("| ENTER THE WORD HERE:-")
-        if len(wrd)>=7:                        # One char size condition applied
-           print("ch should be less then 7 ")  # One char size condition applied
-           continue                            # One char size condition applied
-    
+        for i in range(1,len(wrd)): #second the repeated condi.. rule
+         if wrd[i] == wrd[i-1]:
+           count+=1
+        if count>=2:
+           print("do not stretch the word")
+           continue
+        if len(wrd)>=11: # One char size condition applied
+           print("ch should be less then 11  | this chance is waste")  # One char size condition applied
+           continue    
+        # elif wrd[1:] == wrd[:-1]:  #second the repeated ch/wrd condition 
+        #   print("repeated character not allowed!!")
+        #   continue                        
         for ch in wrd:
          if ch in "AEIOUaeiou":
           val+=1   #for the vowel count
         if wrd == "A" or wrd == "E" or wrd == "I"or wrd == "O"or wrd == "U"or wrd == "a" or wrd == "e":
          continue
         score +=1
-        total = total+  val  #vowel total
+        total = total +  val  #vowel total
         print(wrd,":",score,":",val)
     print("TOTAL POINTS-",total)
   elif choice == 3:
@@ -73,3 +81,5 @@ def again():
    break
 again()
 
+# no num allowed rul 
+#no using privious entered word

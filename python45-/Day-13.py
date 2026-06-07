@@ -93,7 +93,7 @@
 # print(freq)
 
 
-'''only take 3 letter frin the list and append into another then pop'''
+'''only take 3 letter frq in the list and append into another then pop'''
 # teams =["RCB","GT","SRH","RR"]
 # stach = []
 # monish = [1,2,3]
@@ -108,3 +108,18 @@
 #     list2.insert(0,num)
 # print(list2)
 
+'''repeated'''
+
+# name = "banana"  
+# if len(name) == len(set(name)):
+#  print("has no reap char")
+# else:
+#  print("string has repeated chat")
+
+name = "noooob"
+
+for i in range(len(name)-1):
+    if name[i] == name[i +1] == name[i+2]:
+     print("char is repeating")
+else:
+     print("this name is not repeating good",name)

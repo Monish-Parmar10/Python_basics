@@ -103,7 +103,7 @@
 # print(words)
 
 
-'''only take 3 letter frin the list and append into another then pop'''
+'''only take 3 letter frq in the list and append into another then pop'''
 # teams =["RCB","GT","SRH","RR"]
 # stach = []
 # monish = [1,2,3]
@@ -120,3 +120,7 @@
 #     list2.insert(0,num)
 # print(list2)
 
+name = "aaaaa"
+nm= name[1:] == name[:-1]
+print(name[:-1])
+print(nm)

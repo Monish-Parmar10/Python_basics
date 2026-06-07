@@ -1,4 +1,4 @@
-'''method self paremeters'''
+'''method self paremeters   /***'''
 
 
 # class classy:
@@ -39,13 +39,14 @@
 #         self.galaxy = galaxy
 
 #     def __str__(self):
-#         return self.name + ' in ' + self.galaxy
-
-
+#         return self.name + ' in ' + self.galaxy  
+# # or
+#     # def show(self):
+#     #     return self.name +" in "+ self.galaxy
 
 # sun = Star("sun","milky Way")
 # print(sun)
-
+# # print(sun.show())
 
 
 # class vehicle:
@@ -87,29 +88,29 @@
 
 '''multi- level inheritence'''
 
-class Level1:
-    varible_1 = 100
-    def __init__(self):  #constructor
-        self.var_1 = 101
-    def fun_1(self):
-        return 102
-class Level2(Level1): #lev 2 inherit
-    varible_2 = 200
-    def __init__(self):#constructor
-        super().__init__() 
-        self.var_2 = 201
-    def fun_2(self):
-        return 202
-class Level3(Level2):
-    varible_3 = 400
-    def __init__(self): #constructor
-        super().__init__()
-        self.var_3 = 403
-    def fun_3(self):
-        return 404
+# class Level1:
+#     varible_1 = 100
+#     def __init__(self):  #constructor(special method)
+#         self.var_1 = 101
+#     def fun_1(self):
+#         return 102
+# class Level2(Level1): #lev 2 inherit
+#     varible_2 = 200
+#     def __init__(self):#constructor
+#         super().__init__()  #calling parent class constructor
+#         self.var_2 = 201
+#     def fun_2(self):
+#         return 202
+# class Level3(Level2):
+#     varible_3 = 400
+#     def __init__(self): #constructor
+#         super().__init__()
+#         self.var_3 = 403
+#     def fun_3(self):
+#         return 404
     
-obj = Level3()
-print(obj.varible_1,obj.var_1,obj.fun_1())
-print(obj.varible_2,obj.var_2,obj.fun_2())
-print(obj.varible_3,obj.var_3,obj.fun_3())
+# obj = Level3()
+# print(obj.varible_1,obj.var_1,obj.fun_1())
+# print(obj.varible_2,obj.var_2,obj.fun_2())
+# print(obj.varible_3,obj.var_3,obj.fun_3())
 
