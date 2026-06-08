@@ -11,5 +11,5 @@ object_3=ExampleClass(4)
 object_3.third = 5 # type: ignore
 
 print(object_1.__dict__) # dict dictionary that stores all instances variable of obj
-print(object_2.__dict__)
+print(object_2.__dict__) # use to print the key and there values in reprentable format or readable format
 print(object_3.__dict__)
