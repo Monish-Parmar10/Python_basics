@@ -48,8 +48,8 @@ print(monish.grade)
 '''using constructor(initialise val) and method to print data '''
 
 
-class Student:
-    def __init__(self, name, age , gender,grade):#constuct- initial value        #__init__ fix keyword in python for constructor
+class Student: #self explicit pass automatically
+    def __init__(self, name, age , gender,grade):#constuct- initial constructor    #__init__ fix keyword in python for constructor
      self.name = name
      self.age = age
      self.gender = gender
@@ -60,8 +60,11 @@ class Student:
         print("age:",self.age)
         print("gender",self.gender)
         print("grade:",self.grade)
-
-monish = Student("monish",20,"male","12th")#final val       #obj student as a constructor and it give the addresss where the data sstores and put into the monish
+#monish vaiable holding refrence to that obj
+monish = Student("monish",20,"male","12th")#()-> create obj      #obj student as a constructor and it give the addresss where the data sstores and put into the monish
 print(monish) #it gives unreadable address or memory address of obj
-print(monish.__dict__) #dict returns a dictionary containing the object's instance attributes and their values.
+print(monish.__dict__) #dict returns a dictionary containing the object's instance attributes and their values.(type of structure store like key and values)
 monish.printDetails()
+ 
+
+#(remeber pass obj as a self)

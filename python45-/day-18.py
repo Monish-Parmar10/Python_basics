@@ -1,77 +1,77 @@
 '''use super class and super method '''
-# class super:
-#     def __init__(self,name):
-#         self.name = name
-#     def __str__(self): #end user also use repr method but str is for internal use 
-#         return "my name is " +self.name+"."
-# class Sub(super):
-#     def __init__(self,name):
-#         super.__init__(self,name)
+class super:
+    def __init__(self,name):
+        self.name = name
+    def __str__(self): #end user also use repr method but str is for internal use 
+        return "my name is " +self.name+"."
+class Sub(super):
+    def __init__(self,name):
+        super.__init__(self,name)
 
-# obj = Sub("Andy")
-# print(obj)
-# print(obj.__dict__)#also custamise the dict format #use for explaining 
+obj = Sub("Andy")
+print(obj)
+print(obj.__dict__)#also custamise the dict format #use for explaining 
     
 '''multiple inheritance'''
 
-class SuperA:
-    var_a = 10
-    def fun_a(self):
-        return 11
-class SuperB:
-    var_b = 20
-    def fun_b(self):
-        return 21
+# class SuperA:
+#     var_a = 10
+#     def fun_a(self):
+#         return 11
+# class SuperB:
+#     var_b = 20
+#     def fun_b(self):
+#         return 21
     
-class Sub(SuperA,SuperB):
-    pass
+# class Sub(SuperA,SuperB):
+#     pass
 
-obj = Sub()
+# obj = Sub()
 
-print(obj.var_a,obj.fun_a())
-print(obj.var_b,obj.fun_b())
+# print(obj.var_a,obj.fun_a())
+# print(obj.var_b,obj.fun_b())
 
-'''multilevel inheritance'''
-# in python it checks from bottom-to-top
-class Level1: 
-    var = 100
-    def fun(self):
-        return 101
-class Level2(Level1):
-    var = 200
-    def fun(self):
-        return 201
+# '''multilevel inheritance'''
+# # in python it checks from bottom-to-top
+# class Level1: 
+#     var = 100
+#     def fun(self):
+#         return 101
+# class Level2(Level1):
+#     var = 200
+#     def fun(self):
+#         return 201
     
-class Level3(Level2):
-   pass
+# class Level3(Level2):
+#    pass
    
     # var = 303
     # def fun(self):
     #     return 333
     
 
-obj = Level3()
-print(obj.var,obj.fun())
+# obj = Level3()
+# print(obj.var,obj.fun())
 
 
 #here about on same level left right
 '''multiple inheritance'''
 
-class Left:
-    var = "L"
-    var_left="LL"
-    def fun(self):
-        return "left"
-class Right:
-    var= "R"
-    var_right="RR"
-    def fun(self):
-        return "right"
-class Sub(Right,Left): #(left,right)
-    pass
+# class Left:
+#     var = "L"
+#     var_left="LL"
+#     def fun(self):
+#         return "left"
+# class Right:
+#     var= "R"
+#     var_right="RR"
+#     def fun(self):
+#         return "right"
+# class Sub(Right,Left): #(left,right)
+#     pass
 
-obj = Sub()
-print(obj.var,obj.var_left,obj.var_right,obj.fun())
+# obj = Sub()
+# print(obj.var,obj.var_left,obj.var_right,obj.fun())
 
 # MRO method resolution order precidence and order both in multilevel and multiple inheritance
 
@@ -162,16 +162,4 @@ def do_the_division(mine):
 do_the_division(False)
 do_the_division(True)
 
-
-
-# name = input("enter name")
-# def choice(name):
-#  try:
-#    name == str  
-#  except:
-#      print("this input is incorrect")
-     
-#  else:
-#      print(name)
-     
 
