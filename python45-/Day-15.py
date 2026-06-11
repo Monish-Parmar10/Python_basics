@@ -35,32 +35,32 @@
 
 
 
-class Star:
-    def __init__(self,name,galaxy):
-        self.name = name
-        self.galaxy = galaxy
+# class Star:
+#     def __init__(self,name,galaxy):
+#         self.name = name         #object property
+#         self.galaxy = galaxy     #object property 
 
-    def __str__(self):
-        return self.name + ' in ' + self.galaxy  
-# or
-    # def show(self):
-    #     return self.name +" in "+ self.galaxy
+#     def __str__(self):
+#         return self.name + ' in ' + self.galaxy  
+# # or
+#     # def show(self):
+#     #     return self.name +" in "+ self.galaxy
 
-sun = Star("sun","milky Way")
-print(sun)
-# print(sun.show())
+# sun = Star("sun","milky Way")
+# print(sun)
+# # print(sun.show())
 
-'''***'''
+# '''***'''
 # class vehicle:
 #     pass
 # class landvechile(vehicle):
 #     pass
 # class trackedvechile(landvechile):
 #     pass
-# for cls1 in [vehicle , landvechile , trackedvechile]:
+# for cls1 in [vehicle , landvechile , trackedvechile]: #issubclass is checking that cls1 the same cls as,or a child cls(derived) of cls 2
 #     for cls2 in [vehicle, landvechile,trackedvechile]:
 #         print(issubclass(cls1,cls2) ,end="\t")
-#     print()
+    # print()
 
 
 # class super:
@@ -68,51 +68,62 @@ print(sun)
 
 # class sub(super):
 #     subvar = 2
+# # class dub(sub):
+# #    pass
 
-# obj = sub()
+# obj = sub() #obj = 
+# print(obj)
+# print(obj.supvar)
 # print(obj.subvar)
-# print(obj.subvar)
 
 
-# class super:
+# class Super:
 #     def __init__(self):
 #         self.supVar =11
-# class sub(super):
+# class sub(Super):
 #     def __init__(self):
 #       super().__init__()
 #       self.subVar =12
 
 # obj = sub()
-# print(obj.subVar)
 # print(obj.supVar)
+# print(obj.subVar)
 
 
 
 '''multi- level inheritence'''
 
-# class Level1:
-#     varible_1 = 100
-#     def __init__(self):  #constructor(special method)
-#         self.var_1 = 101
-#     def fun_1(self):
-#         return 102
-# class Level2(Level1): #lev 2 inherit
-#     varible_2 = 200
-#     def __init__(self):#constructor
-#         super().__init__()  #calling parent class constructor
-#         self.var_2 = 201
-#     def fun_2(self):
-#         return 202
-# class Level3(Level2):
-#     varible_3 = 400
-#     def __init__(self): #constructor
-#         super().__init__()
-#         self.var_3 = 403
-#     def fun_3(self):
-#         return 404
+class Level1:
+    varible_1 = 100 #cls varible
+
+    def __init__(self):  #constructor(special method)
+        self.var_1 = 101
+
+    def fun_1(self): #method  (outside a class function)
+        return 102
+
+class Level2(Level1): #lev 2 inherit
+    varible_2 = 200
+
+    def __init__(self):#constructor
+        super().__init__()  #calling parent class constructor
+        self.var_2 = 201
+
+    def fun_2(self):
+        return 202
+
+class Level3(Level2):
+    varible_3 = 400
+
+    def __init__(self): #constructor
+        super().__init__()
+        self.var_3 = 403
+
+    def fun_3(self):
+        return 404
     
-# obj = Level3()
-# print(obj.varible_1,obj.var_1,obj.fun_1())
-# print(obj.varible_2,obj.var_2,obj.fun_2())
-# print(obj.varible_3,obj.var_3,obj.fun_3())
+obj = Level3()
+print(obj.varible_1,obj.var_1,obj.fun_1())
+print(obj.varible_2,obj.var_2,obj.fun_2())
+print(obj.varible_3,obj.var_3,obj.fun_3())
 

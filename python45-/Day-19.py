@@ -1,49 +1,49 @@
 '''negative indexing'''
 
-city = 'Bhopal'
-print(city[0])
-print(city[2])
+# city = 'Bhopal'
+# print(city[0])
+# print(city[2])
 
-print(city[-1])
-print(city[5])
+# print(city[-1])
+# print(city[5])
 
-print(city[-3])
-print(city[3])
+# print(city[-3])
+# print(city[3])
 
 
 '''slicing'''
 
-name = 'priya sharma'
+# name = 'priya sharma'
 
-print(name[0:5])
-print(name[6:])
-print(name[:5])
-print(name[::2])
-print(name[::-1])
+# print(name[0:5])
+# print(name[6:])
+# print(name[:5])
+# print(name[::2])
+# print(name[::-1])
 
-print(len(city))
-print(len(name))
+# print(len(city))
+# print(len(name))
 
 '''split or trim method for clearing white space'''
 
 '''in for searching the text in list'''
 
-text = '  Hello Python World! '
-#Case
+# text = '  Hello Python World! '
+# #Case
 
-print(text.upper())
-print(text.lower())
-print(text.title())
-print(text.capitalize())
+# print(text.upper())
+# print(text.lower())
+# print(text.title())
+# print(text.capitalize())
 
-#Strip whitespace
-print(text.strip())
+# #Strip whitespace
+# print(text.strip())
 
-#search
+# #search
 
-print('python' in text) #true
-print(text.find('python')) # 8 space count including hello and white space
-print(text.count('l')) 
+# print('python' in text) #true
+# print(text.find('python')) # 8 space count including hello and white space
+# print(text.count('l')) 
 
 
 '''split and join  '''
@@ -94,20 +94,23 @@ print(text.count('l'))
 # price,gst = 500 ,0.18
 # print(f'price:Rs.{price} | GST:Rs.{price*gst:.2f} | Total.Rs/{price*(1+gst):.2f}')
 
-# string = "Hello , how are you doing today "
-# string = string.lower()
-# print(string)
-# count = 0
-# for wrd in string:
-#     if wrd in "aeiou":
-# #    if wrd == 'A' or wrd == 'E' or wrd == 'I' or wrd =='O'or wrd =='U' or wrd =='a' or wrd =='a' or wrd =='e' or wrd =='i' or wrd =='o':
-#       count +=1
-# print("vowel",count)
-# print(string[15:19])
-# print(string[::-1])
-# print(string[-1:])
-
-
+string = "Hello , how are you doing today "
+string = string.lower()
+print(string)
+count = 0
+for wrd in string:
+     if wrd in "aeiou":
+#    if wrd == 'A' or wrd == 'E' or wrd == 'I' or wrd =='O'or wrd =='U' or wrd =='a' or wrd =='a' or wrd =='e' or wrd =='i' or wrd =='o':
+      count +=1
+print("vowel",count)
+print(string[15:19])
+result = string.split()
+print(" ".join(result[::-1]))
+print(string[-1:])
+if string == string [::-1]:
+    print("the string is palindrome")
+else:
+    print("string is not palindrome")
 
 '''with or as resourse lock or resourse memangement '''
 
