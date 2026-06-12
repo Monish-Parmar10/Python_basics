@@ -1,15 +1,12 @@
 '''CLASS CONTAINS  parameter method constructor
 obj = Theclass() ()-> the contructor for creating the obj
-implicit automatically receivie
-self is kis obj pr work ho rha h self obj
-
-'''
+implicit automatically receivie'''
 
 '''class varible /static variable wrk with class not with obj'''
 # class ExampleClass:
-#     counter = 0
+#     counter = 0 #class (static ) varible
 #     def __init__(self,val =1):
-#         self.__first = val
+#         self.__first = val #(instance varible)
 #         ExampleClass.counter +=1  #class name with counter {static variable ****} 
 
 # example_object_1  = ExampleClass()
@@ -70,7 +67,7 @@ self is kis obj pr work ho rha h self obj
 #             self.b = 1  #get an error for no attribute inside b 
 # example_obj = ExampleCls(1)
 
-# if hasattr(example_obj,'a'):
+# if hasattr(example_obj,'a'): #checks the object has the attribute or not
 #     print("a=",example_obj.a)
 # if hasattr(example_obj,'b'):
 #     print("b=",example_obj.b)
@@ -83,13 +80,12 @@ self is kis obj pr work ho rha h self obj
 #         #self.__first = val
 #         ExampleCls.counter += 1
 #         if val % 2 != 0:
-#             self.a = 1
+#             self.a = 1   #it (a,b)is a instance varible not class varible
 #         else:
 #             self.b = 1  #get an error for no attribute inside b 
 # example_obj = ExampleCls(1)
 # print(example_obj.a)
 # print(example_obj.b)
-
 
 # if hasattr(example_obj,'a'):
 #     print("a=",example_obj.a)
@@ -108,6 +104,7 @@ self is kis obj pr work ho rha h self obj
 #         self.__venomous = False
 
 # myObj = Python()
+
 # print("myobj.population",myObj.population)
 
 # print("myobj.victims",myObj.victims)
@@ -121,15 +118,15 @@ self is kis obj pr work ho rha h self obj
 #     victims = 0
 #     def __init__(self):
 #         self.length_ft = 3
-#         self.__venomous = False
-# myObj = Python()
+#         self.__venomous = False # stoping it to become myobj.__venomous
+# myObj = Python() 
 
 # print("myobj.population",myObj.population)
 # print("myobj.victims",myObj.victims)
 # print("myobj.length_fr",myObj.length_ft)
 # # print("myobj.__venomous",myObj.__venomous)
-# print("myobj.venomous",myObj._python.__venomous)
-
+# print("myobj.venomous",myObj._Python__venomous) #name mangling
+'''***'''
 # class Python:
 #     population = 1
 #     victims = 0
@@ -140,7 +137,8 @@ self is kis obj pr work ho rha h self obj
 
 # myObj = Python()
 # print("myobj.population",myObj.population)
-# print(hasattr(myObj.version_2))#***
+# #it check myobj have version_2 (NO) then does class python have version_2 (yes)
+# print(hasattr(myObj,'version_2'))#it check version_2 is in obj or not , if it out of obj then false
 # print("myobj.victims",myObj.victims)
 
 '''abstraction'''
@@ -166,7 +164,7 @@ self is kis obj pr work ho rha h self obj
 # '''use to print the main class name'''
 # print(type(obj).__name__)
 
-'''is instance check whether the obj is blongs to the class or not'''
+'''is instance check whether the obj is belongs to the class or not'''
 # class vehicle:
 #     pass
 # class LandVehicle(vehicle):
@@ -184,22 +182,22 @@ self is kis obj pr work ho rha h self obj
 
 '''reference check using is'''
 
-class SampelClass:
-    def __init__(self,val):
-        self.val =val
+# class SampelClass:
+#     def __init__(self,val):
+#         self.val =val
 
-object_1 = SampelClass(0)
-object_2 = SampelClass(2)
-object_3 = object_1
-object_3.val += 1
+# object_1 = SampelClass(0)
+# object_2 = SampelClass(2)
+# object_3 = object_1
+# object_3.val += 1
 
-print(object_1 is object_2)
-print(object_2 is object_3)
-print(object_3 is object_1)
-print(object_1.val,object_2.val,object_3.val)
+# print(object_1 is object_2)
+# print(object_2 is object_3)
+# print(object_3 is object_1)
+# print(object_1.val,object_2.val,object_3.val)
 
-string_1 = "Mary had a little "
-string_2 ="Mary had a little lamb"
-string_1 += "lamb"
+# string_1 = "Mary had a little "
+# string_2 ="Mary had a little lamb"
+# string_1 += "lamb"
 
-print(string_1 == string_2 , string_1 is string_2)
+# print(string_1 == string_2 , string_1 is string_2) #string_2 o/p false because both str1& 2 have diffrent memory it not giving reference it has diffrent memory

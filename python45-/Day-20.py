@@ -44,14 +44,14 @@
 #       print("studen is not found")
 
 
-#impoert numput lib as np np -> is a variable
+# #impoert numput lib as np np -> is a variable
 
-import numpy as np 
+# import numpy as np 
 
-arr1d = np.array([1,2,3,4,5])
-arr2d = np.array([[22,33,44],[55,22,55],[77,44,22]])   #3 student * 3 subject
+# arr1d = np.array([1,2,3,4,5])
+# arr2d = np.array([[22,33,44],[55,22,55],[77,44,22]])   #3 student * 3 subject
 
-print(arr2d.shape) #(3,3)
+# print(arr2d.shape) #(3,3)
 
-print(arr2d.dtype)#int 64
-print(arr2d.ndim)#2 (2-dimensional)
+# print(arr2d.dtype)#int 64
+# print(arr2d.ndim)#2 (2-dimensional)

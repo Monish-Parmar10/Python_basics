@@ -1,9 +1,9 @@
 class ExampleClass:
-    def __init__(self,val=1):
+    def __init__(self,val=1):  #construcor with perameter
         self.first = val
-    def set_second(self,val):
+    def set_second(self,val): #method
         self.second = val
-
+    
 object_1=ExampleClass(1)
 object_2=ExampleClass(2)
 object_2.set_second(3)
