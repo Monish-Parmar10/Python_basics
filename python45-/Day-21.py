@@ -1,5 +1,5 @@
 
-# import numpy as np #here np is a varible
+import numpy as np #here np is a varible
 # arr1d = np.array([1,2,3,4,5])
 # arr2d = np.array([[22,33,44],[55,22,55],[77,44,22]])   #3 student * 3 subject
 
@@ -23,8 +23,8 @@
 # lin = np.linspace(0,1,11) #it prints the val btw the 0->1 taking around 11 element
 # print(lin)
 
-# random = np.random.randint(40,100,(5,3))  #print(matrix 5x3) containing random values btw 1 40 to 100
-# print(random)
+random = np.random.randint(40,100,(5,3))  #print(matrix 5x3) containing random values btw 1 40 to 100
+print(random)
 
 
 
