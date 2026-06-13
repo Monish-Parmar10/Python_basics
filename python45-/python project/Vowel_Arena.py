@@ -1,7 +1,8 @@
 def again():
         
 
- while True:
+ while True: #running until i ecplisitly stop it by exit
+
   print("-"*26)
   print("|","WELCOME TO VOWEL ARENA","|")
   print("-"*26)
@@ -15,9 +16,12 @@ def again():
   print("-"*19)
 
 
+  choice = int(input("select your choice TYPE (1/2/3):"))
+ 
 
-  choice = int(input("select your choice TYPE 1 OR 2:"))
+
   if choice == 1:
+
 
     print(" "*15,"|","WLC IN DETAILS SECTION","|")
 
@@ -46,40 +50,58 @@ def again():
     print("|","WELCOME TO VOWEL ARENA","|")
     print("-"*26)
     total = 0
+    used_words = []
    
     for wrd in range(5):
         score = 0
         val=0
         count = 0
+        wrd_vowel = ""
         wrd = input("| ENTER THE WORD HERE:-")
+        wrd = wrd.lower()
+        if wrd in used_words:                 #sixth RULE -> used_wrd 
+          print("repeated word Not allowed")
+          continue 
+        used_words.append(wrd)
         for i in range(1,len(wrd)): #second the repeated condi.. rule
          if wrd[i] == wrd[i-1]:
            count+=1
         if count>=2:
            print("do not stretch the word")
            continue
-        if len(wrd)>=11: # One char size condition applied
-           print("ch should be less then 11  | this chance is waste")  # One char size condition applied
-           continue    
-        # elif wrd[1:] == wrd[:-1]:  #second the repeated ch/wrd condition 
+        if len(wrd)<=4 or len(wrd)>=11: # One char size condition applied
+           print("reminder:-.ch length should be btw 4 and 11| this chance is waste")  # One char size condition applied
+           continue  
+        if not wrd.isalpha(): #third no num in wrd RULE
+          print("Only alphabet is allowed")  
+          continue
+        if wrd == 'aeiou' or wrd =='uoiea':
+          print("direct aeiou wrd is not allowed")
+          continue
+        # elif wrd[1:] == wrd[:-1]:  #second the repeated ch/wrd condition .
         #   print("repeated character not allowed!!")
-        #   continue                        
-        for ch in wrd:
-         if ch in "AEIOUaeiou":
+        #   continue  
+        wrd = wrd.lower()  #fourth
+        for ch in wrd:   #fifth
+         if ch in "aeiou" :
           val+=1   #for the vowel count
-        if wrd == "A" or wrd == "E" or wrd == "I"or wrd == "O"or wrd == "U"or wrd == "a" or wrd == "e":
-         continue
+        # if wrd == "A" or wrd == "E" or wrd == "I"or wrd == "O"or wrd == "U"or wrd == "a" or wrd == "e":
+          continue
+         wrd_vowel += ch
         score +=1
         total = total +  val  #vowel total
-        print(wrd,":",score,":",val)
+        print(wrd,":",score,":",val," |word|->",wrd_vowel)
     print("TOTAL POINTS-",total)
+
+
   elif choice == 3:
     print("succssfully exit from the program")
     return 
   else:
    print("invalid choice")
    break
+  
 again()
 
-# no num allowed rul 
+# no num allowed rul ]
 #no using privious entered word
