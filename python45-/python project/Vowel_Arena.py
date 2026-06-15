@@ -50,14 +50,13 @@ def again():
     total = 0
     used_words = []
     for wrd in range(5):
-     for y in range(5):  
         Round_wrd = 0
         val=0
         count = 0
         wrd_vowel = ""
         wrd = input("| ENTER THE WORD HERE:-")
-        Comp_player()
         wrd = wrd.lower()
+        Comp_player()
      
         if wrd in used_words:                 #sixth RULE -> used_wrd 
           print("repeated word Not allowed")
@@ -90,8 +89,9 @@ def again():
          wrd_vowel += ch
         Round_wrd += len(used_words)
         total = total + val  #vowel total
-        print("ROUNT:",Round_wrd)
-        print("You:",wrd,":","score",":",val," |Eaten|->",wrd_vowel)
+        print("ROUNd:",Round_wrd)
+        print("You:",wrd,":","score",":",val )
+        print("|Eaten|->",wrd_vowel)
     print("TOTAL POINTS-",total)
 
   elif choice == 3: 
@@ -103,51 +103,56 @@ def again():
   
 import random
 def Comp_player():
+      
+       CP_total = 0 
+       used_CP = []
 
- CP_wrds =[ "audience","aeroplane","oceanic","euphoria","picture","holiday", "family","journey", "welcome",
-    "america", "article", "library", "academy", "elephant", "umbrella", "hospital"]
- CP_total = 0
- used_CP = []
- for y in range(0):
-        round_CP =0
-        CP_wrd = random.choice(CP_wrds)  #***
-        val=0
-        count = 0
-        CP_vowel = ""
-        CP_wrd = CP_wrd.lower()
+
+       CP_wrds =[ "audience","aeroplane","oceanic","euphoria","picture","holiday", "family","journey", "welcome",
+           "america", "article", "library", "academy", "elephant", "umbrella", "hospital"]
+       round_CP =0
+       val=0
+       count = 0
+       CP_wrd = random.choice(CP_wrds)  #***
+       CP_wrd = CP_wrd.lower()
+      
+       for x in CP_wrd:
         if CP_wrd in used_CP:                 #sixth RULE -> used_wrd 
-           print("repeated word Not allowed")
-           continue 
-        used_CP.append(CP_wrd)
-        for i in range(1,len(CP_wrd)): #second the repeated condi.. rule
-         if CP_wrd[i] == CP_wrd[i-1]:
+         print("repeated word Not allowed")
+         continue 
+       used_CP.append(CP_wrd)
+       CP_vowel = ""
+       for i in range(1,len(CP_wrd)): #second the repeated condi.. rule
+          if CP_wrd[i] == CP_wrd[i-1]:
            count+=1
-        if count>=2:
+          if count>=2:
            print("do not stretch the word")
            continue
-        if len(CP_wrd)<=4 or len(CP_wrd)>=13: # One char size condition applied
+          if len(CP_wrd)<=4 or len(CP_wrd)>=13: # One char size condition applied
            print("reminder:-.ch length should be btw 4 and 11| this chance is waste")  # One char size condition applied
            continue  
-        if not CP_wrd.isalpha(): #third no num in wrd RULE
-          print("Only alphabet is allowed")  
-          continue
-        if CP_wrd == 'aeiou' or CP_wrd =='uoiea':
-          print("direct aeiou wrd is not allowed")
-          continue
+          if not CP_wrd.isalpha(): #third no num in wrd RULE
+           print("Only alphabet is allowed")  
+           continue
+          if CP_wrd == 'aeiou' or CP_wrd =='uoiea':
+           print("direct aeiou wrd is not allowed")
+           continue
         # # elif wrd[1:] == wrd[:-1]:  #second the repeated ch/wrd condition .
         #   print("repeated character not allowed!!")
          # continue  
-        CP_wrd = CP_wrd.lower()  #fourth
-        for ch in CP_wrd:   #fifth
-         if ch in "aeiou" :
-          val+=1   #for the vowel count
+          
+          CP_wrd = CP_wrd.lower()  #fourth
+         
+          for ch in CP_wrd:   #fifth
+            if ch in "aeiou" :
+              val+=1   #for the vowel count
         # if wrd == "A" or wrd == "E" or wrd == "I"or wrd == "O"or wrd == "U"or wrd == "a" or wrd == "e":
-          continue
-         CP_vowel += ch
-        round_CP += len(used_CP)
-        CP_total = CP_total +  val  #vowel total
-        print("ROUND:",round_CP)
-        print("PC:",CP_wrd,":","score",":",val," |Eaten|->",CP_vowel)
- print("TOTAL POINTS-",CP_total)
-
+            else:
+             CP_vowel += ch
+          round_CP +=  len(used_CP)
+          CP_total = CP_total +  val  #vowel total
+       print("|Eaten|->",CP_vowel)
+       print("ROUND:",round_CP)
+       print("PC:",CP_wrd,":","score",":",val)
+       print("TOTAL POINTS-",CP_total)
 again()

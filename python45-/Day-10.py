@@ -1,31 +1,31 @@
 '''functions  1st built in function 2nd pre- define modules  3nd user defie function 3rd'''
 
-# def message(): #it was written here but it will execute where we call it  
+def message(): #it was written here but it will execute where we call it  
 
-#     print("enter your val:")
+    print("enter your val:")
 
-# message()
-# a = int(input())
+message()
+a = int(input())
 
-# message()
-# b= int(input())
+message()
+b= int(input())
 
-# message()
-# c = int(input())
+message()
+c = int(input())
 
 
 
-# def message():
-#  list =[1,2,3,4,5]
-#  print("list->",list)
+def message():
+ list =[1,2,3,4,5]
+ print("list->",list)
 
-# # message = 1
-# message()
-# print("here we go")
-# print(message)
+# message = 1
+message()
+print("here we go")
+print(message)
 
-# print("we are here")
-# message()
+print("we are here")
+message()
 
 
 
@@ -144,15 +144,15 @@
 # print(list_sum(3))
 
 
-def  doc_Strange(n):
-    doc_lst =[]
+# def  doc_Strange(n):
+#     doc_lst =[]
     
-    for i in range(0,n):
-        #  doc_lst.insert(0,i+1)
-        doc_lst.append(i+1)
+#     for i in range(0,n):
+#         #  doc_lst.insert(0,i+1)
+#         doc_lst.append(i+1)
 
-    return doc_lst
-print(doc_Strange(5))
+#     return doc_lst
+# print(doc_Strange(5))
 
 
 
