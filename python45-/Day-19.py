@@ -48,12 +48,12 @@
 
 '''split and join  '''
 
-# # csv = 'Rahul,22,Bhopal,Engineer'
-# # parts = csv.split(',')
-# # print(parts)
-# # print(parts[0])
-# # rejoined = ' | '.join(parts)
-# # print(rejoined)
+csv = 'Rahul,22,Bhopal,Engineer'
+parts = csv.split(',')
+print(parts)
+print(parts[0])
+rejoined = ' | '.join(parts)
+print(rejoined)
 
 # # #check content
 

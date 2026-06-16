@@ -1,5 +1,6 @@
-
+import random
 def again():
+
         
 
  while True: #running until i ecplisitly stop it by exit
@@ -49,33 +50,41 @@ def again():
     print("-"*26)       
     total = 0
     used_words = []
+    used_CP = []
+    CP_total = 0
     for wrd in range(5):
+                         # type: ignore
         Round_wrd = 0
         val=0
         count = 0
         wrd_vowel = ""
         wrd = input("| ENTER THE WORD HERE:-")
+        print()
         wrd = wrd.lower()
-        Comp_player()
      
         if wrd in used_words:                 #sixth RULE -> used_wrd 
-          print("repeated word Not allowed")
+          print("!!repeated word Not allowed!!")
+          print()
           continue 
         used_words.append(wrd)
         for i in range(1,len(wrd)): #second the repeated condi.. rule
          if wrd[i] == wrd[i-1]:
            count+=1
         if count>=2:
-           print("do not stretch the word")
+           print("!!do not stretch the word !!")
+           print()
            continue
         if len(wrd)<=4 or len(wrd)>=11: # One char size condition applied
-           print("reminder:-.ch length should be btw 4 and 11| this chance is waste")  # One char size condition applied
+           print("!!-reminder:-.ch length should be btw 4 and 11| this chance is waste-!!")  # One char size condition applied
+           print()
            continue  
         if not wrd.isalpha(): #third no num in wrd RULE
           print("Only alphabet is allowed")  
+          print()
           continue
         if wrd == 'aeiou' or wrd =='uoiea':
           print("direct aeiou wrd is not allowed")
+          print()
           continue
         # elif wrd[1:] == wrd[:-1]:  #second the repeated ch/wrd condition .
         #   print("repeated character not allowed!!")
@@ -89,10 +98,12 @@ def again():
          wrd_vowel += ch
         Round_wrd += len(used_words)
         total = total + val  #vowel total
-        print("ROUNd:",Round_wrd)
+        print("-"*4,"US_ROUND:","-"*4,"{",Round_wrd,"}")
         print("You:",wrd,":","score",":",val )
         print("|Eaten|->",wrd_vowel)
-    print("TOTAL POINTS-",total)
+        print()
+        CP_total = Comp_player(Round_wrd, used_CP, CP_total)
+    print("US_TOTAL POINTS-",total)
 
   elif choice == 3: 
     print("succssfully exit from the program")
@@ -101,58 +112,60 @@ def again():
    print("invalid choice")
    break
   
-import random
-def Comp_player():
-      
-       CP_total = 0 
-       used_CP = []
 
+def Comp_player(nob,used_CPP,CPP_total):
+  
+  CP_wrds =[ "audience","aeroplane","oceanic","euphoria","picture","holiday", "family","journey", "welcome",
+            "america", "article", "library", "academy", "elephant", "umbrella", "hospital"]
+ 
 
-       CP_wrds =[ "audience","aeroplane","oceanic","euphoria","picture","holiday", "family","journey", "welcome",
-           "america", "article", "library", "academy", "elephant", "umbrella", "hospital"]
-       round_CP =0
-       val=0
-       count = 0
-       CP_wrd = random.choice(CP_wrds)  #***
-       CP_wrd = CP_wrd.lower()
-      
-       for x in CP_wrd:
-        if CP_wrd in used_CP:                 #sixth RULE -> used_wrd 
+  
+  CP_wrd = random.choice(CP_wrds)  #***
+  CP_wrd = CP_wrd.lower()
+  for x in range(1):
+        val=0
+        count = 0     
+        CP_vowel = ""
+        if CP_wrd in used_CPP:                 #sixth RULE -> used_wrd 
          print("repeated word Not allowed")
          continue 
-       used_CP.append(CP_wrd)
-       CP_vowel = ""
-       for i in range(1,len(CP_wrd)): #second the repeated condi.. rule
+        used_CPP.append(CP_wrd)
+
+        for i in range(1,len(CP_wrd)): #second the repeated condi.. rule
           if CP_wrd[i] == CP_wrd[i-1]:
            count+=1
-          if count>=2:
+        if count>=2:
            print("do not stretch the word")
            continue
-          if len(CP_wrd)<=4 or len(CP_wrd)>=13: # One char size condition applied
+        if len(CP_wrd)<=4 or len(CP_wrd)>=13: # One char size condition applied
            print("reminder:-.ch length should be btw 4 and 11| this chance is waste")  # One char size condition applied
            continue  
-          if not CP_wrd.isalpha(): #third no num in wrd RULE
-           print("Only alphabet is allowed")  
+        if not CP_wrd.isalpha(): #third no num in wrd RULE
+           print("Only alphabet is allowed") 
+
            continue
-          if CP_wrd == 'aeiou' or CP_wrd =='uoiea':
+        if CP_wrd == 'aeiou' or CP_wrd =='uoiea':
            print("direct aeiou wrd is not allowed")
+           print()
            continue
         # # elif wrd[1:] == wrd[:-1]:  #second the repeated ch/wrd condition .
         #   print("repeated character not allowed!!")
          # continue  
           
-          CP_wrd = CP_wrd.lower()  #fourth
-         
-          for ch in CP_wrd:   #fifth
-            if ch in "aeiou" :
-              val+=1   #for the vowel count
+        CP_wrd = CP_wrd.lower()  #fourth 
+        for ch in CP_wrd:   #fifth
+          if ch in "aeiou" :
+            val+=1   #for the vowel count
         # if wrd == "A" or wrd == "E" or wrd == "I"or wrd == "O"or wrd == "U"or wrd == "a" or wrd == "e":
-            else:
-             CP_vowel += ch
-          round_CP +=  len(used_CP)
-          CP_total = CP_total +  val  #vowel total
-       print("|Eaten|->",CP_vowel)
-       print("ROUND:",round_CP)
-       print("PC:",CP_wrd,":","score",":",val)
-       print("TOTAL POINTS-",CP_total)
+            continue
+          CP_vowel += ch
+        CPP_total = CPP_total +  val  #vowel total #total reset prib*****
+        print("-"*4,"PC_ROUND:","-"*4,"{",nob,"}")
+        print("PC:",CP_wrd,":","score",":",val)
+        print("|Eaten|->",CP_vowel)
+        print()
+  if nob == 5:
+    print("CP_TOTAL POINTS-", CPP_total)  
+    return CPP_total
+  
 again()
