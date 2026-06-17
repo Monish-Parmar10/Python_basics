@@ -102,8 +102,9 @@ def again():
         print("You:",wrd,":","score",":",val )
         print("|Eaten|->",wrd_vowel)
         print()
-        CP_total = Comp_player(Round_wrd, used_CP, CP_total)
+        CP_total = Comp_player(Round_wrd, used_CP, CP_total,total)
     print("US_TOTAL POINTS-",total)
+    
 
   elif choice == 3: 
     print("succssfully exit from the program")
@@ -113,7 +114,7 @@ def again():
    break
   
 
-def Comp_player(nob,used_CPP,CPP_total):
+def Comp_player(PC_round,used_CPP,CPP_total,total):
   
   CP_wrds =[ "audience","aeroplane","oceanic","euphoria","picture","holiday", "family","journey", "welcome",
             "america", "article", "library", "academy", "elephant", "umbrella", "hospital"]
@@ -159,13 +160,12 @@ def Comp_player(nob,used_CPP,CPP_total):
         # if wrd == "A" or wrd == "E" or wrd == "I"or wrd == "O"or wrd == "U"or wrd == "a" or wrd == "e":
             continue
           CP_vowel += ch
-        CPP_total = CPP_total +  val  #vowel total #total reset prib*****
-        print("-"*4,"PC_ROUND:","-"*4,"{",nob,"}")
+        CPP_total +=val  #vowel total #total reset prib*****
+        print("-"*4,"PC_ROUND:","-"*4,"{",PC_round,"}")
         print("PC:",CP_wrd,":","score",":",val)
         print("|Eaten|->",CP_vowel)
         print()
-  if nob == 5:
+  if PC_round == 5:
     print("CP_TOTAL POINTS-", CPP_total)  
-    return CPP_total
-  
+  return CPP_total
 again()
