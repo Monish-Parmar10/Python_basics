@@ -18,7 +18,7 @@ losses = []
 for epoch in range(10000):
     #forward pass
     h= sigmoid(x @ w1)
-    o = sigmoid(h @ w2)
+    o = sigmoid(h @ w2) # @ -> this will use for the all possible matrix multiplication
 
     #loss (Mean squared Error)
     loss = np.mean((y - o)**2)

@@ -1,0 +1,1 @@
+clip for get proper range
