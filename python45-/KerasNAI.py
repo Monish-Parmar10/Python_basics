@@ -3,7 +3,7 @@ from tensorflow import keras
 import numpy as np
 import matplotlib.pyplot as plt
 
-#load MNIST: 70000 hanf written digit images (28x28 pixels, grayscale)
+#load MNIST: 70000 hand written digit images (28x28 pixels, grayscale)
 (X_train, y_train),(X_test, y_test) = keras.datasets.mnist.load_data()
 print(f'Training: {X_train.shape} | Test:{X_test.shape}')
 
@@ -67,7 +67,7 @@ axes[1].set_titley('loss'); axes[1].legend()
 plt.tigth_layout(); plt.show()
 
 
-#see preductioln on test images
+#see preduction on test images
 prediction = model.preduct(X_test[:15])
 pred_classes = np.argmax(prediction,axis=1)
 plt.figure(figsize=(15,3))

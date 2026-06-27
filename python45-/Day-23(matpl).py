@@ -3,11 +3,11 @@ import seaborn as sns
 import numpy as np
 import pandas as pd
 
-# # #Data
+# #Data
 # months = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec']
 # sales = [45,52,48,62,58,72,69,75,68,82,90,95] #in thousand
 
-# #line Chart - tends over time
+#line Chart - tends over time
 
 # plt.figure(figsize=(12,5)) 
 # plt.plot(months,sales,marker='o',color='steelblue', linewidth = 2,markersize = 7) #plot
@@ -18,6 +18,18 @@ import pandas as pd
 # plt.grid(True,alpha= 0.5)
 # plt.tight_layout()
 # plt.show()
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 # #Data 
@@ -43,20 +55,20 @@ import pandas as pd
 
 # clip for get proper range
 
-import numpy as np
-std_hrs = np.random.uniform(2,10,50)
-mrks = std_hrs * 7 + np.random.normal(0,8,50)       
-mrks = np.clip(mrks,30,100)
+# import numpy as np
+# std_hrs = np.random.uniform(2,10,50)
+# mrks = std_hrs * 7 + np.random.normal(0,8,50)       
+# mrks = np.clip(mrks,30,100)
 
-plt.figure(figsize=(8,5))
-plt.scatter(std_hrs, mrks, c=mrks, cmap='RdYlGn', s = 100, alpha =0.8)
-plt.colorbar(label = 'Marks')
-plt.title('study hours vs exam marks:')
-plt.xlabel('Study hourse/Day')
-plt.ylabel('Exam Marks')
-plt.show()
+# plt.figure(figsize=(8,5))
+# plt.scatter(std_hrs, mrks, c=mrks, cmap='RdYlGn', s = 100, alpha =0.8)
+# plt.colorbar(label = 'Marks')
+# plt.title('study hours vs exam marks:')
+# plt.xlabel('Study hourse/Day')
+# plt.ylabel('Exam Marks')
+# plt.show()
 
-print(std_hrs)
+# print(std_hrs)
 
 '''Seaborn'''
 '''significance of 42 in maths or other'''

@@ -48,12 +48,12 @@
 
 '''split and join  '''
 
-csv = 'Rahul,22,Bhopal,Engineer'
-parts = csv.split(',')
-print(parts)
-print(parts[0])
-rejoined = ' | '.join(parts)
-print(rejoined)
+# csv = 'Rahul,22,Bhopal,Engineer'
+# parts = csv.split(',')
+# print(parts)
+# print(parts[0])
+# rejoined = ' | '.join(parts)
+# print(rejoined)
 
 # # #check content
 
@@ -84,7 +84,7 @@ print(rejoined)
 # print(f'{name:<15} | {marks:>8.2f}|Rank:{rank}') # left/right align
 # # monish     | 92.57 |Rank:3
 # print(f'hello{name:^10}')
-# print(f'hello {}')
+
 
 
 
@@ -94,30 +94,30 @@ print(rejoined)
 # price,gst = 500 ,0.18
 # print(f'price:Rs.{price} | GST:Rs.{price*gst:.2f} | Total.Rs/{price*(1+gst):.2f}')
 
-string = "Hello , how are you doing today "
-string = string.lower()
-print(string)
-count = 0
-for wrd in string:
-     if wrd in "aeiou":
-#    if wrd == 'A' or wrd == 'E' or wrd == 'I' or wrd =='O'or wrd =='U' or wrd =='a' or wrd =='a' or wrd =='e' or wrd =='i' or wrd =='o':
-      count +=1
-print("vowel",count)
-print(string[15:19])
-result = string.split()
-print(" ".join(result[::-1]))
-print(string[-1:])
-if string == string [::-1]:
-    print("the string is palindrome")
-else:
-    print("string is not palindrome")
+# string = "Hello , how are you doing today "
+# string = string.lower()
+# print(string)
+# count = 0
+# for wrd in string:
+#      if wrd in "aeiou":
+# #    if wrd == 'A' or wrd == 'E' or wrd == 'I' or wrd =='O'or wrd =='U' or wrd =='a' or wrd =='a' or wrd =='e' or wrd =='i' or wrd =='o':
+#       count +=1
+# print("vowel",count)
+# print(string[15:19])
+# result = string.split()
+# print(" ".join(result[::-1]))
+# print(string[-1:])
+# if string == string [::-1]:
+#     print("the string is palindrome")
+# else:
+#     print("string is not palindrome")
 
 '''with or as resourse lock or resourse memangement '''
 
-# with open("data.txt","r") as file:
-#     data = file.read()
+with open("data.txt","r") as file:
+    data = file.read()
 
-# print(data)
+print(data)
 
 '''read/write/update'''
 with open('students.txt','w') as f:

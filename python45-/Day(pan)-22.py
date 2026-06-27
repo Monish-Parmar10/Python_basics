@@ -18,7 +18,7 @@ df = pd.DataFrame(data)
 # print(df.describe())
 
 
-# print("df['Name']: \n",df['Name']) #using sq braket because it say pass rhe list and then pass the key 
+# print("df['Name']: \n",df['Name']) #using sq braket because it say pass the list and then pass the key 
 
 # print(df[['Name','Marks']])
 
